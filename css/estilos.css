@@ -23,7 +23,7 @@
 }
 
 /* CÁLCULO NOTA NAU */
-.nota-input, .form-control {
+.nota-input {
   width: 3rem;
   border-color: #593196;
 }
@@ -70,9 +70,32 @@
 }
 
 .image-link:hover img {
-  filter: brightness(0.8);
+  filter: brightness(0.9);
 }
 
+.logo-img {
+  height: 74px;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+@media (max-width: 576px) {
+  .logo-img {
+    height: 54px;
+  }
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.card-logo-hover {
+  transition: filter 0.25s ease;
+}
+
+.card-logo-hover:hover {
+  filter: brightness(0.9);
+}
 
 /* FOOTER */
 .footer-link {
