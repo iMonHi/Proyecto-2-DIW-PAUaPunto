@@ -1,0 +1,62 @@
+:root {
+  --violeta-pastel: #f7f5fd;  
+}
+
+.section-degradado {
+  background: var(--violeta-pastel);
+}
+
+/* SECCIÓN 1: HERO */
+.card-hover {
+  background-color: var(--bs-light);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.card-hover:hover {
+  background-color: var(--bs-primary);
+  color: white;
+}
+
+/* CÁLCULO NOTA NAU */
+.nota-input, .form-control {
+  width: 3rem;
+  border-color: #593196;
+}
+
+.formula-style {
+  line-height: 2.5;
+}
+
+/* SECTION 2: HERRAMIENTAS*/
+/* AyroUI Slider 1 (adaptado para plantilla Pulse) */
+.pau-slider .pau-slide{
+  min-height: 520px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.pau-slider .pau-slide::before{
+  content:"";
+  position:absolute;
+  inset: 0;
+  background: rgba(0,0,0,.65);
+}
+
+.pau-slider .carousel-caption{
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pau-slider .carousel-caption > *{
+  position: relative;
+}
+
+@media (max-width: 767px){
+  .pau-slider .pau-slide{ min-height: 380px; }
+}
+
+/* SECTION 3: MODELOS*/
