@@ -1,9 +1,14 @@
 :root {
-  --violeta-pastel: #f7f5fd;  
+  --violeta-pastel: #f7f5fd;
+  --naranja-resalt: #db5800;
 }
 
 .section-degradado {
   background: var(--violeta-pastel);
+}
+
+.resaltado {
+  color: var(--naranja-resalt);
 }
 
 /* SECCIÓN 1: HERO */
@@ -59,4 +64,24 @@
   .pau-slider .pau-slide{ min-height: 380px; }
 }
 
-/* SECTION 3: MODELOS*/
+/* SECTION 3: UNIVERSIDADES */
+.image-link img {
+  transition: filter 0.25s ease;
+}
+
+.image-link:hover img {
+  filter: brightness(0.8);
+}
+
+
+/* FOOTER */
+.footer-link {
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-link:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
