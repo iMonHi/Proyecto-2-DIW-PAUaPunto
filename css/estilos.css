@@ -11,6 +11,7 @@
   color: var(--naranja-resalt);
 }
 
+/* ==== INDEX.HTML ==== */
 /* SECCIÓN 1: HERO */
 .card-hover {
   background-color: var(--bs-light);
@@ -107,4 +108,15 @@
 .footer-link:hover {
   color: #ffffff;
   text-decoration: underline;
+}
+
+/* ==== TÉCNICAS-HERRAMIENTAS.HTML ==== */
+/* Sidebar */
+.sidebar-styles {
+  top: 90px;
+  max-width: 100vh;
+}
+
+.nav-link {
+  line-height: 1;
 }
