@@ -3,6 +3,7 @@
   --naranja-resalt: #db5800;
 }
 
+/* ==== AJUSTES GLOBALES ==== */
 .section-degradado {
   background: var(--violeta-pastel);
 }
@@ -12,6 +13,11 @@
 }
 
 /* ==== INDEX.HTML ==== */
+/* Ajuste Navbar sticky */
+.index section[id] {
+  scroll-margin-top: 35px;
+}
+
 /* SECCIÓN 1: HERO */
 .card-hover {
   background-color: var(--bs-light);
@@ -57,7 +63,7 @@
   justify-content: center;
 }
 
-.pau-slider .carousel-caption > *{
+.pau-slider .carousel-caption > * {
   position: relative;
 }
 
@@ -111,21 +117,34 @@
 }
 
 /* ==== TÉCNICAS-HERRAMIENTAS.HTML ==== */
+/* Ajuste Navbar sticky */
+.tecn section[id] {
+  scroll-margin-top: 90px;
+}
+
 /* Sidebar */
-.sidebar-styles {
-  top: 90px;
-  max-width: 100vh;
+@media (min-width: 992px){
+  .sidebar-box{
+    position: sticky;
+    top: 5rem;
+    max-height: 80vh;
+    overflow: auto;
+  }
 }
 
-.nav-link {
-  line-height: 1;
+.section-gap {
+  margin: 5rem auto;
 }
 
-.btn-hover {
-  transition: background-color 0.3s ease, color 0.3s ease;
+.sidebar-styles .nav-link {
+  line-height: 0.5;
 }
 
-.btn-hover:hover {
+.btn-ext-hover {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.btn-ext-hover:hover {
   background-color: var(--bs-primary);
-  color: white;
+  color: #fff;
 }

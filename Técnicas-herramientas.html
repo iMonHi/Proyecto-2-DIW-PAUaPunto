@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
-<meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAU a Punto: técncias y herramientas</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/pulse/bootstrap.min.css" rel="stylesheet">
-    <link href="css/estilos.css" rel="stylesheet">
-<body>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PAU a Punto: técnicas y herramientas</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/pulse/bootstrap.min.css" rel="stylesheet">
+  <link href="css/estilos.css" rel="stylesheet">
+</head>
+<body class="tecn">
 
 <!-- BARRA DE NAVEGACIÓN -->
-<nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+<nav class="navbar navbar-expand-lg bg-primary sticky-top" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand me-4" href="index.html"> 
         <img src="img/logo nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
@@ -33,26 +35,26 @@
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Prepárate</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="Técnicas-herramientas.html">Técnicas de relajación</a>
+            <a class="dropdown-item" href="#jacobson">Técnicas de relajación</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Hábitos poderosos</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="Técnicas-herramientas.html">Herramientas para el estudio</a>
+            <a class="dropdown-item" href="#pomodoro">Herramientas para el estudio</a>
             <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="Técnicas-herramientas.html">IA para el estudio</a>
+            <a class="dropdown-item" href="#ChatGTP">IA para el estudio</a>
           </div>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#calculadora">Calculadora PAU
+          <a class="nav-link" href="index.html#calculadora">Calculadora PAU
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#modelos">Exámenes</a>
+          <a class="nav-link" href="index.html#modelos">Exámenes</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#universidades">Universidades
+          <a class="nav-link" href="index.html#universidades">Universidades
           </a>
         </li>
       </ul>
@@ -66,21 +68,19 @@
 </nav>
 
 <main>
-  <h1 class="text-center py-4">Técnicas para el estudio y la organización</h1>
-
-  <div class="container-fluid">
+    <div class="container-fluid">
     <div class="row">
-
+    
       <!-- SIDEBAR -->
-      <aside class="col-12 col-lg-3 col-xl-2 border-end d-none d-lg-block">
-        <div class="fixed-top sidebar-styles py-3">
+      <aside class="col-12 col-lg-3 col-xl-2 d-none d-lg-flex my-4">
+        <div class="sidebar-box w-100 px-2 border rounded-2">
           <h3 class="h6 text-uppercase text-body-secondary px-3 mb-2">Estudio y organización</h3>
           <nav class="nav flex-column px-2 mb-2">
             <a class="nav-link" href="#pomodoro">Pomodoro</a>
             <a class="nav-link" href="#90-20">Técnica 90/20</a>
             <a class="nav-link" href="#recuperacion">Práctica de recuperación</a>
           </nav>
-          <h3 class="h6 text-uppercase text-body-secondary px-3 mb-2">Relacación y antiestrés</h3>
+          <h3 class="h6 text-uppercase text-body-secondary px-3 mb-2">Relajación y antiestrés</h3>
           <nav class="nav flex-column px-2 mb-2">
             <a class="nav-link" href="#jacobson">Relajación de Jacobson</a>
             <a class="nav-link" href="#respiracion">Respiración profunda</a>
@@ -88,14 +88,14 @@
           </nav>
           <h3 class="h6 text-uppercase text-body-secondary px-3 mb-2">Herramientas de IA</h3>
           <nav class="nav flex-column px-2 mb-2">
-            <a class="nav-link" href="#extra1">Prompts para el estudio</a>
-            <a class="nav-link" href="#extra2">Extra 2</a>
-            <a class="nav-link" href="#extra3">Extra 3</a>
+            <a class="nav-link" href="#ChatGTP">Prompts para el estudio</a>
+            <a class="nav-link" href="#mymap">MyMap.AI</a>
+            <a class="nav-link" href="#scholarly">Scholarly AI</a>
           </nav>
           <h3 class="h6 text-uppercase text-body-secondary px-3 mb-2">Hábitos poderosos</h3>
           <nav class="nav flex-column px-2 mb-2">
             <a class="nav-link" href="#extra1">Alimentación</a>
-            <a class="nav-link" href="#extra2">Deporte y ejercio</a>
+            <a class="nav-link" href="#extra2">Deporte y ejercicio</a>
             <a class="nav-link" href="#extra3">Sueño</a>
             <a class="nav-link" href="#extra4">Extra 4</a>
             <a class="nav-link" href="#extra5">Extra 5</a>
@@ -107,16 +107,16 @@
       <div class="col-12 col-lg-9 col-xl-10">
 
         <!-- Pomodoro -->
-        <section id="pomodoro" class="container my-5">
+        <section id="pomodoro" class="section-gap px-3 px-lg-4">
           <h2 class="mb-4">Técnica Pomodoro</h2>
           <div class="row align-items-center g-4">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <p>La técnica Pomodoro es una forma sencilla de estudiar mejor gestionando el tiempo: trabajas 25 minutos con máxima concentración y luego haces 5 minutos de descanso para resetear la mente.</p>
               <p>Para aplicarla, repite este ciclo 4 veces y después haz una pausa más larga (15-30 min); así evitas la fatiga, mantienes el foco y rindes más sin quemarte.</p>
               <p>Esta técnica funciona porque el cerebro mantiene mejor la atención en bloques cortos de tiempo: estudios muestran que la concentración sostenida empieza a disminuir a partir de los 20–30 minutos. Por eso, este método es especialmente eficaz para tareas que requieren constancia, memorización y para evitar la procrastinación, como el estudio diario o la resolución de ejercicios.</p>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <div class="ratio ratio-16x9">
                 <iframe src="https://www.youtube.com/embed/om-U6hiX4lw" title="Técnica Pomodoro" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
               </div>
@@ -125,16 +125,16 @@
         </section>
 
         <!-- 90/20 -->
-        <section id="90-20" class="container my-5">
+        <section id="90-20" class="section-gap px-3 px-lg-4">
           <h2 class="mb-4">Técnica 90/20</h2>
           <div class="row align-items-center g-4">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <p>La técnica 90/20 se basa en estudiar 90 minutos de concentración profunda seguidos de 20 minutos de descanso real, ideal para tareas largas y exigentes.</p>
               <p>Frente al Pomodoro (25/5), pensado para vencer la procrastinación y mantener el foco en tareas cortas, la 90/20 es más eficaz para estudio avanzado y proyectos largos.</p>
               <p>Funciona porque favorece el estado de “deep work”: menos interrupciones, mayor continuidad y mejor consolidación de la información en tareas complejas. Investigaciones indican que los bloques largos mejoran la comprensión profunda y la transferencia a largo plazo, siempre que el descanso sea completo.</p>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <div class="ratio ratio-16x9">
                 <iframe src="https://www.youtube.com/embed/cPtXhWnqzAc?si=lD-Kan48eKlhCYs5" title="Técnica 90/20" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
               </div>
@@ -143,16 +143,16 @@
         </section>
 
         <!-- Recuperación -->
-        <section id="recuperacion" class="container my-5">
+        <section id="recuperacion" class="section-gap px-3 px-lg-4">
           <h2 class="mb-4">Práctica de recuperación</h2>
           <div class="row align-items-center g-4">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <p>La práctica de recuperación consiste en estudiar intentando recordar la información sin mirar los apuntes, en lugar de releerlos pasivamente. Numerosos estudios en demuestran que el acto de recuperar información fortalece mejora la retención a largo plazo.</p>
               <p>Para aplicarla sigue estos pasos: primero estudia el contenido de forma comprensiva; después, cierra los apuntes y escribe o explica todo lo que recuerdes; por último, revisa el material para detectar errores y lagunas, y vuelve a intentarlo más adelante. Repite este proceso las veces que necesites.</p>
               <p>El cerebro aprende mejor cuando se enfrenta al esfuerzo de recordar, y no solo de reconocer la información. Está especialmente indicada para memorizar conceptos clave, preparar exámenes teóricos y comprobar si realmente dominas un tema, siendo una de las estrategias con mayor respaldo científico en educación.</p>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <div class="ratio ratio-16x9">
                 <iframe src="https://www.youtube.com/embed/7cAbAL0pkpQ?si=xLnsJGnuqJDfVNbq" title="Técnica 90/20" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen> </iframe>
               </div>
@@ -161,16 +161,16 @@
         </section>
 
         <!-- Jacobson -->
-        <section id="jacobson" class="container my-5">
+        <section id="jacobson" class="section-gap px-3 px-lg-4">
           <h2 class="mb-4">Relajación progresiva de Jacobson</h2>
           <div class="row align-items-center g-4">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <p>La relajación progresiva de Jacobson es una técnica que reduce la ansiedad mediante la tensión y relajación consciente de distintos grupos musculares. Ayuda a tomar conciencia del cuerpo y a liberar la tensión acumulada por el estrés académico.</p>
               <p>Para aplicarla, tensa durante 5 segundos un grupo muscular (por ejemplo, manos o hombros) y relájalo durante 10–15 segundos antes de pasar al siguiente. Recorre todo el cuerpo de forma ordenada, en un entorno tranquilo.</p>
               <p>Esta técnica está respaldada por estudios en psicología clínica que muestran una reducción significativa del estrés y la activación fisiológica. Es especialmente eficaz antes de exámenes, presentaciones orales o situaciones que generan nervios físicos intensos.</p>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <div class="ratio ratio-16x9">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/vAaRM_wV5W8?si=T82KPiUsdlKdX4JP" title="Relajación progresiva de Jacobson" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
@@ -179,16 +179,16 @@
         </section>
 
         <!-- Respiración -->
-        <section id="respiracion" class="container my-5">
+        <section id="respiracion" class="section-gap px-3 px-lg-4">
           <h2 class="mb-4">Respiración profunda (diafragmática)</h2>
           <div class="row align-items-center g-4">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <p>La respiración profunda o diafragmática es una técnica sencilla para calmar el sistema nervioso y reducir la ansiedad. Consiste en respirar lenta y profundamente usando el diafragma en lugar del pecho.</p>
               <p>Para practicarla, inhala por la nariz durante 4 segundos, mantén el aire 2 segundos y exhala lentamente por la boca durante 6 segundos. Repite el ciclo durante 3–5 minutos, centrando la atención en la respiración.</p>
               <p>Numerosos estudios demuestran que este tipo de respiración activa el sistema parasimpático, disminuyendo la frecuencia cardíaca y el cortisol. Es ideal justo antes de empezar un examen o cuando aparecen bloqueos por nervios.</p>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <div class="ratio ratio-16x9">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/EGO5m_DBzF8?si=6LqqJ0C3Sk_5UClz" title="Respiración profunda" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
@@ -197,16 +197,16 @@
         </section>
 
         <!-- Visualización -->
-        <section id="visualizacion" class="container my-5">
+        <section id="visualizacion" class="section-gap px-3 px-lg-4">
           <h2 class="mb-4">Visualización positiva</h2>
           <div class="row align-items-center g-4">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <p>La visualización consiste en imaginar de forma consciente una situación futura de manera positiva y detallada, como realizar un examen con calma y seguridad. Se utiliza para reducir la ansiedad y mejorar la confianza.</p>
               <p>Para aplicarla, busca un lugar tranquilo, cierra los ojos y visualízate afrontando el examen con serenidad: entrando al aula, leyendo las preguntas con calma y respondiendo con seguridad durante varios minutos.</p>
               <p>Estudios en neurociencia y psicología del rendimiento muestran que la visualización activa las mismas áreas cerebrales que la experiencia real. Es especialmente útil para exámenes importantes, pruebas orales y situaciones que generan miedo anticipatorio.</p>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <div class="ratio ratio-16x9">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/BdyPzolaYUw?si=cDmEuMt_pwcTzh7S" title="Visualización positiva" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
@@ -215,16 +215,16 @@
         </section>
 
         <!-- Estudiar con IA -->
-        <section id="estudio-ChatGTP" class="container my-5">
+        <section id="ChatGTP" class="section-gap px-3 px-lg-4">
           <h2 class="mb-4">Estudia con ayuda de IA Generativa</h2>
           <div class="row align-items-center g-4">
-            <div class="col-12 col-md-6">
-              <p></p>
-              <p></p>
-              <p></p>
+            <div class="col-12 col-lg-6">
+              <p>La inteligencia artificial puede ayudarte a estudiar mejor si la usas como apoyo y no como sustituto de tu esfuerzo. ChatGPT permite comprender mejor los temas, organizar el estudio y optimizar el tiempo, siempre desde una actitud activa y responsable.</p>
+              <p>Con un buen uso, permite aplicar técnicas eficaces como explicar los temas con tus propias palabras, hacer preguntas para profundizar, mejorar y ordenar apuntes o digitalizar notas en papel para que sean más claras y manejables. Esto facilita el repaso y mejora la comprensión de los temas.</p>
+              <p>También puede servir para preparar exámenes mediante preguntas de repaso y simulacros adaptados a tu nivel, con correcciones y explicaciones. Así puedes detectar errores y reforzar lo que necesitas mejorar, siempre verificando la información y manteniendo un pensamiento crítico.</p>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <div class="ratio ratio-16x9">
                 <iframe width="560" height="315" src="https://www.youtube.com/embed/q6QACUlYjms?si=F_pbjioh-asfdRYO" title="Técnicas de estudio con ChatGTP" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
               </div>
@@ -232,19 +232,19 @@
           </div>
         </section>
 
-        <section id="mymap" class="container my-5">
+        <section id="mymap" class="section-gap px-3 px-lg-4">
           <h2 class="mb-4">MyMap.AI</h2>
           <div class="row align-items-center g-4">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <p>AI Study Plan Creator de MyMap.AI es una herramienta de IA que te crea un plan de estudio personalizado en minutos. Tú le dices qué asignaturas tienes, cuándo examinas y cuánto tiempo puedes estudiar, y te lo organiza en sesiones realistas.</p>
               <p>Cómo usarla (pasos rápidos): 1) escribe tus asignaturas y fechas de examen/entrega; 2) indica tus horas disponibles por día; 3) genera el plan y ajusta lo que necesites (más repaso, más práctica, descansos, etc.).</p>
               <p>Funciona bien porque reduce la “carga mental” de planificar (lo que suele hacer que procrastines) y te obliga a dividir objetivos grandes en tareas pequeñas y concretas. Es ideal para organizar semanas de estudio, preparar exámenes con varios temas y mantener constancia sin improvisar cada día.</p>
 
               <a href="https://www.mymap.ai/es/study-plan-creator" target="_blank" rel="noopener noreferrer"
-                class="btn btn-outline-primary rounded-pill px-4">IR A LA WEB</a>
+                class="btn btn-outline-primary rounded-pill btn-ext-hover px-4">IR A LA WEB</a>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <div class="ratio ratio-16x9">
                 <img src="img/imagen 3.jpg" alt="imagen decorativa" class="img-fluid">
               </div>
@@ -252,21 +252,21 @@
           </div>
         </section>
 
-        <section id="scholarly" class="container my-5">
+        <section id="scholarly" class="section-gap px-3 px-lg-4">
           <h2 class="mb-4">Scholarly AI</h2>
           <div class="row align-items-center g-4">
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <p>El AI Study Schedule Generator de Scholarly crea un horario de estudio optimizado para ti: repartiendo materias, priorizando fechas cercanas y encajándolo en tus horas disponibles. Es útil si te agobias organizándote o si siempre acabas dejando lo más difícil para el final.</p>
               <p>Cómo llevarlo a cabo: 1) mete tus asignaturas y tareas (y qué tan “pesadas” son); 2) añade tus horas libres y fechas límite; 3) genera el horario y úsalo como guía semanal, reajustándolo si un día fallas (sin drama, se reequilibra).</p>
               <p>Funciona porque convierte “tengo que estudiar muchísimo” en un plan concreto con bloques diarios, lo que mejora la adherencia y reduce la indecisión. Es ideal para semanas previas a exámenes, épocas con muchas entregas y estudiantes que necesitan estructura clara y realista.</p>
 
               <a href="https://scholarly.so/tools/study-schedule-generator" target="_blank" rel="noopener noreferrer"
-                class="btn btn-outline-primary btn-outline rounded-pill px-4">
+                class="btn btn-outline-primary rounded-pill btn-ext-hover px-4">
                 IA A LA WEB
               </a>
             </div>
 
-            <div class="col-12 col-md-6">
+            <div class="col-12 col-lg-6">
               <div class="ratio ratio-16x9">
                 <img src="img/imagen 8.jpg" alt="imagen decorativa" class="img-fluid">
               </div>
@@ -277,6 +277,8 @@
       </div>
     </div>
   </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </main>
 
 <!-- Footer (ayroui template) -->
