@@ -21,6 +21,16 @@
   background-color: var(--blanco);
 }
 
+.bg-resaltado {
+  background-color: var(--naranja-resalt);
+}
+
+.btn-top {
+  border: 1px solid var(--naranja-resalt);
+  color: var(--naranja-resalt);
+  font-weight: bold;
+}
+
 /* ==== INDEX.HTML ==== */
 /* Ajuste Navbar sticky */
 .index section[id] {
