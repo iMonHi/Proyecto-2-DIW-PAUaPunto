@@ -1,6 +1,7 @@
 :root {
   --violeta-pastel: #e6e1f5;
   --naranja-resalt: #db5800;
+  --blanco: #fff;
 }
 
 /* ==== AJUSTES GLOBALES ==== */
@@ -10,6 +11,14 @@
 
 .resaltado {
   color: var(--naranja-resalt);
+}
+
+.text-white {
+  color: var(--blanco);
+}
+
+.bg-white {
+  background-color: var(--blanco);
 }
 
 /* ==== INDEX.HTML ==== */
