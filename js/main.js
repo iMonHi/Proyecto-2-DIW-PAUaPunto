@@ -99,3 +99,113 @@ document.addEventListener('DOMContentLoaded', () => {
         result.value = nota.toFixed(2);
     });
 });
+
+
+
+
+
+
+function initSiteSearch() {
+  const form = $("siteSearchForm");
+  const input = $("siteSearchInput");
+  const modalEl = $("searchModal");
+  const resultsEl = $("searchResults");
+  const metaEl = $("searchMeta");
+
+  // Si no existe el componente en esta página, no hacemos nada
+  if (!form || !input || !modalEl || !resultsEl || !metaEl) return;
+  if (typeof Fuse === "undefined" || typeof bootstrap === "undefined") return;
+
+  // OJO: el nombre del archivo con acentos debe ser exacto
+  const pages = ["index.html", "agenda.html", "Técnicas-herramientas.html"];
+
+  let fuse = null;
+
+  buildSiteIndex(pages)
+    .then((items) => {
+      fuse = new Fuse(items, {
+        keys: ["title", "text"],
+        includeScore: true,
+        threshold: 0.35,
+        ignoreLocation: true,
+      });
+    })
+    .catch(() => {
+      // Si falla (por ejemplo, en file://), no rompemos nada
+    });
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const q = (input.value || "").trim();
+    if (!q) return;
+
+    if (!fuse) {
+      metaEl.textContent = "El buscador necesita ejecutarse en un servidor local (no file://).";
+      resultsEl.innerHTML = "";
+      new bootstrap.Modal(modalEl).show();
+      return;
+    }
+
+    const res = fuse.search(q).slice(0, 12);
+    metaEl.textContent = `${res.length} resultado(s) para: “${q}”`;
+
+    resultsEl.innerHTML = res
+      .map((r) => {
+        const it = r.item;
+        const subtitle = it.pageLabel
+          ? `<div class="small text-secondary">${escHtml(it.pageLabel)}</div>`
+          : "";
+        return `
+          <a class="list-group-item list-group-item-action" href="${escHtml(it.url)}">
+            <div class="fw-semibold">${escHtml(it.title)}</div>
+            ${subtitle}
+          </a>
+        `;
+      })
+      .join("");
+
+    new bootstrap.Modal(modalEl).show();
+  });
+}
+
+async function buildSiteIndex(pages) {
+  const items = [];
+  const parser = new DOMParser();
+
+  for (const page of pages) {
+    const res = await fetch(page, { cache: "no-store" });
+    const html = await res.text();
+    const doc = parser.parseFromString(html, "text/html");
+
+    const pageTitle = (doc.querySelector("title")?.textContent || page).trim();
+
+    // Indexa h1/h2/h3
+    const headings = Array.from(doc.querySelectorAll("h1, h2, h3"));
+    for (const h of headings) {
+      const title = (h.textContent || "").trim();
+      if (!title) continue;
+
+      // Preferimos enlazar a la section con id (si existe)
+      const section = h.closest("section[id]");
+      const id = section?.id || h.id || "";
+      const url = id ? `${page}#${id}` : page;
+
+      items.push({ title, text: title, url, pageLabel: pageTitle });
+    }
+
+    // Indexa títulos de cards (si hay)
+    const cardTitles = Array.from(doc.querySelectorAll(".card-title"));
+    for (const c of cardTitles) {
+      const title = (c.textContent || "").trim();
+      if (!title) continue;
+
+      items.push({ title, text: title, url: page, pageLabel: pageTitle });
+    }
+  }
+
+  // Quitar duplicados
+  const uniq = new Map();
+  for (const it of items) uniq.set(`${it.url}::${it.title}`, it);
+  return Array.from(uniq.values());
+}

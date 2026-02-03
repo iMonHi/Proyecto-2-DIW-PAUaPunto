@@ -1,7 +1,13 @@
 :root {
-  --violeta-pastel: #e6e1f5;
-  --naranja-resalt: #db5800;
+  --violeta-pastel: #E9E4F6;
+  --naranja-resalt: #AD4500;
   --blanco: #fff;
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 120%;
+    }
 }
 
 /* ==== AJUSTES GLOBALES ==== */
@@ -166,4 +172,13 @@
 .btn-ext-hover:hover {
   background-color: var(--bs-primary);
   color: #fff;
+}
+
+.aside-link-style {
+  color: black;
+  transition: color 0.3s ease;
+}
+
+.aside-link-style:hover {
+  color: var(--naranja-resalt);
 }
