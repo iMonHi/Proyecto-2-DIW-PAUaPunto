@@ -58,3 +58,44 @@ document.addEventListener('DOMContentLoaded', () => {
         result.value = nota.toFixed(2);
     });
 });
+
+// Fórmula matemática FP
+document.addEventListener('DOMContentLoaded', () => {
+    const calcBtn = document.getElementById("calcBtnFp");
+    const result = document.getElementById("resultFp");
+
+    function readNumber(id) {
+        const el = document.getElementById(id);
+        return Number(el.value);
+    }
+
+    function inRange(n, min, max) {
+        return Number.isFinite(n) && n >= min && n <= max;
+    }
+
+    calcBtn.addEventListener("click", () => {
+        const mfp = readNumber('mfp');
+        const m1 = readNumber('m1fp');
+        const m2 = readNumber('m2fp');
+        const p1 = readNumber('p1fp');
+        const p2 = readNumber('p2fp');
+
+        const notasOk =
+        inRange(mfp, 0, 10) &&
+        inRange(m1, 0, 10) &&
+        inRange(m2, 0, 10);
+
+        if (!notasOk) {
+        result.value = "";
+        Swal.fire({
+            icon: "error",
+            title: "Datos incorrectos",
+            text: "Revisa MFP, M1 y M2: deben ser números entre 0 y 10."
+        });
+        return;
+        }
+
+        const nota = mfp + (m1 * p1) + (m2 * p2);
+        result.value = nota.toFixed(2);
+    });
+});

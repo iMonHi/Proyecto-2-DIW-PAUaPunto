@@ -180,6 +180,7 @@
       <div class="text-center text-wrap formula-style">
         <strong>NOTA ACCESO TITULACIÓN</strong>
         = (
+
         <span class="fw-bold text-primary">MB</span>
         <input id="mb" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" inputmode="decimal" min="0" max="10" step="0.01" placeholder="0.00" aria-label="MB">
         × 0.6 +
@@ -220,7 +221,7 @@
       </div>
 
       <div class="text-center text-wrap formula-style">
-        <span class="fw-bold ms-2">Resultado: </span>
+        <span class="fw-bold ms-2">Resultado (sobre 14 ptos.): </span>
         <input id="result" class="form-control form-control-sm d-inline-block text-center ms-2" type="text" placeholder="--.--" readonly aria-label="Resultado"/>
       </div>
 
@@ -240,53 +241,71 @@
   </div>
 
   <!-- Desde FP -->
-  <div class="container d-flex align-items-center justify-content-center pt-4 pb-4">
+  <!-- Desde Formación Profesional -->
+  <div class="container d-flex py-4">
     <div class="card shadow-sm p-2">
-      <h3 class="h5 mb-3 text-center">Desde estudios de Formación Profesional</h3>
+      <h3 class="h4 mb-3 text-center">Desde estudios de Formación Profesional</h3>
+      <p class="text-center fw-lighter fst-italic">Introduce tus notas con punto (ej., 8.25).</p>
+
+      <form id="notaFormFp" novalidate>
         <div class="text-center text-wrap formula-style">
           <strong>NOTA ACCESO TITULACIÓN</strong>
           =
+
           <span class="fw-bold text-primary">MFP</span>
-          <input class="form-control form-control-sm d-inline-block text-center nota-input"
-                type="text" inputmode="decimal" placeholder="0.00"
-                maxlength="5" pattern="^\d{1,2}([.,]\d{0,2})?$" aria-label="MB">
-        + (
+          <input id="mfp" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" inputmode="decimal" min="0" max="10" step="0.01" 
+          placeholder="0.00" aria-label="MFP">
+          + (
+
           <span class="fw-bold text-primary">M1</span>
-          <input class="form-control form-control-sm d-inline-block text-center nota-input"
-                type="text" inputmode="decimal" placeholder="0.00"
-                maxlength="5" pattern="^\d{1,2}([.,]\d{0,2})?$" aria-label="NE1">
+          <input id="m1fp" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" inputmode="decimal" min="0" max="10" step="0.01" placeholder="0.00" aria-label="M1">
           ×
+
           <span class="fw-bold text-primary">P1</span>
-          <input class="form-control form-control-sm d-inline-block text-center nota-input"
-                type="text" inputmode="decimal" placeholder="0.00"
-                maxlength="4" pattern="^0([.,]\d{0,2})?$|^1([.,]0{0,2})?$" aria-label="FP de NE1">
+          <select id="p1fp" class="form-select form-select-sm d-inline-block nota-input" aria-label="P1">
+            <option value="0" selected>0</option>
+            <option value="0.1">0.1</option>
+            <option value="0.2">0.2</option>
+          </select>
           ) + (
+
           <span class="fw-bold text-primary">M2</span>
-          <input class="form-control form-control-sm d-inline-block text-center nota-input"
-                type="text" inputmode="decimal" placeholder="0.0"
-                maxlength="5" pattern="^\d{1,2}([.,]\d{0,2})?$" aria-label="NE2">
+          <input id="m2fp" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" inputmode="decimal" min="0" max="10" step="0.01" placeholder="0.00" aria-label="M2">
           ×
+
           <span class="fw-bold text-primary">P2</span>
-          <input class="form-control form-control-sm d-inline-block text-center nota-input"
-                type="text" inputmode="decimal" placeholder="0.0"
-                maxlength="4" pattern="^0([.,]\d{0,2})?$|^1([.,]0{0,2})?$" aria-label="FP de NE2">
+          <select id="p2fp" class="form-select form-select-sm d-inline-block nota-input" aria-label="P2">
+            <option value="0" selected>0</option>
+            <option value="0.1">0.1</option>
+            <option value="0.2">0.2</option>
+          </select>
           )
         </div>
-        <div class="text-center text-wrap formula-style">
-          <span class="fw-bold ms-2">Resultado: </span>
-          <input class="form-control form-control-sm d-inline-block text-center ms-2" type="text" value="--.--" readonly aria-label="Resultado"/>
+
+        <div class="d-flex justify-content-center mt-3">
+          <button id="calcBtnFp" type="button" class="btn btn-primary btn-sm rounded-pill">
+            Calcular
+          </button>
         </div>
+
+        <div class="text-center text-wrap formula-style">
+          <span class="fw-bold ms-2">Resultado (sobre 14 ptos.): </span>
+          <input id="resultFp" class="form-control form-control-sm d-inline-block text-center ms-2" type="text" placeholder="--.--" readonly aria-label="Resultado"/>
+        </div>
+      </form>
     </div>
   </div>
-  <div class="d-flex justify-content-center">
+
+  <div class="d-flex justify-content-center pb-4">
     <div class="d-inline-flex flex-wrap gap-3 justify-content-center">
-      <span><strong class="text-primary">MB:</strong> Media FP</span>
+      <span><strong class="text-primary">MFP:</strong> Media del Ciclo Formativo</span>
       <span><strong class="text-primary">M1:</strong> Materia 1</span>
-      <span><strong class="text-primary">p1:</strong> Ponderación de la Materia 1</span>
+      <span><strong class="text-primary">P1:</strong> Ponderación de la Materia 1</span>
       <span><strong class="text-primary">M2:</strong> Materia 2</span>
-      <span><strong class="text-primary">p2:</strong> Ponderación de la Materia 2</span>
+      <span><strong class="text-primary">P2:</strong> Ponderación de la Materia 2</span>
     </div>
   </div>
+
 </section>
 
 
