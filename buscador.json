@@ -1,62 +1,82 @@
 [
     {
         "title": "Agenda PAU",
+        "description": "Información general sobre fechas clave, plazos y organización de la PAU.",
         "url": "agenda.html"
     },
     {
         "title": "Horario PAU",
+        "description": "Horarios oficiales de los exámenes de la PAU por días y franjas horarias.",
         "url": "agenda.html#horario"
     },
     {
         "title": "Guia estudiante",
+        "description": "Guía práctica para el alumnado con instrucciones, normas, adaptaciones y recomendaciones para la PAU.",
         "url": "agenda.html#guia"
     },
     {
-        "title": "Tecnicas de estudio",
-        "url": "tecnicas.html"
+        "title": "Calendario",
+        "description": "Calendario completo de la PAU con exámenes, revisiones y publicación de notas.",
+        "url": "agenda.html#calendario"
+    },
+    {
+        "title": "Convocatorias",
+        "description": "Información sobre las convocatorias ordinaria y extraordinaria de la PAU.",
+        "url": "agenda.html#calendario"
+    },
+    {
+        "title": "Asignaturas",
+        "description": "Listado de asignaturas dn la PAU y su organización por fases.",
+        "url": "agenda.html#calendario"
     },
     {
         "title": "Relajacion",
+        "description": "Técnicas de relajación para reducir el estrés y la ansiedad antes de los exámenes.",
         "url": "tecnicas.html#jacobson"
     },
     {
         "title": "Tecnicas de estudio",
+        "description": "Consejos prácticos para mejorar la concentración y el rendimiento académico.",
         "url": "tecnicas.html"
     },
     {
         "title": "Deporte",
+        "description": "Beneficios del ejercicio físico para mejorar la memoria y el bienestar durante el estudio.",
         "url": "tecnicas.html#deporte"
     },
     {
         "title": "Sueño",
+        "description": "Hábitos de descanso y sueño para un buen rendimiento académico.",
         "url": "tecnicas.html#sueno"
     },
     {
         "title": "Alimentacion",
+        "description": "Recomendaciones de alimentación saludable para estudiar mejor y rendir más.",
         "url": "tecnicas.html#alimentación"
     },
     {
         "title": "Pomodoro",
+        "description": "Técnica de estudio basada en bloques de tiempo y descansos programados.",
         "url": "tecnicas.html#pomodoro"
     },
     {
-        "title": "Recuerdo activo",
-        "url": "tecncias.html#recuperacion"
-    },
-    {
         "title": "Universidades",
+        "description": "Información sobre universidades de España y de la Comunidad Valenciana",
         "url": "index.html#universidades"
     },
     {
         "title": "Calculadora de nota",
+        "description": "Herramienta para calcular la nota de acceso a la universidad según ponderaciones.",
         "url": "index.html#calculadora"
     },
     {
         "title": "Ponderaciones",
+        "description": "Explicación de cómo funcionan las ponderaciones en la nota de admisión.",
         "url": "agenda.html#guia"
     },
     {
         "title": "Modelos exámenes",
+        "description": "Ejemplos y modelos de exámenes de la PAU para practicar antes de las pruebas.",
         "url": "index.html#modelos"
     }
 ]
