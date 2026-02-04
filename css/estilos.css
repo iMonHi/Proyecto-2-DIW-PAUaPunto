@@ -182,3 +182,12 @@
 .aside-link-style:hover {
   color: var(--naranja-resalt);
 }
+
+/* ==== AGENDA.HTML ==== */
+.ponderaciones-link {
+  transition: color 0.3 ease;
+}
+
+.ponderaciones-link:hover {
+  color: var(--naranja-resalt);
+}

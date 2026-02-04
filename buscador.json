@@ -1,0 +1,62 @@
+[
+    {
+        "title": "Agenda PAU",
+        "url": "agenda.html"
+    },
+    {
+        "title": "Horario PAU",
+        "url": "agenda.html#horario"
+    },
+    {
+        "title": "Guia estudiante",
+        "url": "agenda.html#guia"
+    },
+    {
+        "title": "Tecnicas de estudio",
+        "url": "tecnicas.html"
+    },
+    {
+        "title": "Relajacion",
+        "url": "tecnicas.html#jacobson"
+    },
+    {
+        "title": "Tecnicas de estudio",
+        "url": "tecnicas.html"
+    },
+    {
+        "title": "Deporte",
+        "url": "tecnicas.html#deporte"
+    },
+    {
+        "title": "Sueño",
+        "url": "tecnicas.html#sueno"
+    },
+    {
+        "title": "Alimentacion",
+        "url": "tecnicas.html#alimentación"
+    },
+    {
+        "title": "Pomodoro",
+        "url": "tecnicas.html#pomodoro"
+    },
+    {
+        "title": "Recuerdo activo",
+        "url": "tecncias.html#recuperacion"
+    },
+    {
+        "title": "Universidades",
+        "url": "index.html#universidades"
+    },
+    {
+        "title": "Calculadora de nota",
+        "url": "index.html#calculadora"
+    },
+    {
+        "title": "Ponderaciones",
+        "url": "agenda.html#guia"
+    },
+    {
+        "title": "Modelos exámenes",
+        "url": "index.html#modelos"
+    }
+]
