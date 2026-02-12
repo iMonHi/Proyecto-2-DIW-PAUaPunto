@@ -1,5 +1,6 @@
 :root {
   --violeta-pastel: #E9E4F6;
+  --violeta: #c6b2f5;
   --naranja-resalt: #AD4500;
   --blanco: #fff;
 }
@@ -36,6 +37,20 @@
   color: var(--naranja-resalt);
   font-weight: bold;
 }
+
+/* Modal (buscador) */
+#searchModal .list-group-item {
+  background-color: var(--violeta);
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#searchModal .list-group-item:hover {
+  background-color: var(--bs-primary);
+  color: var(--blanco);
+  cursor: pointer;
+}
+
 
 /* ==== INDEX.HTML ==== */
 /* Ajuste Navbar sticky */
@@ -102,7 +117,7 @@
 }
 
 .image-link:hover img {
-  filter: brightness(0.9);
+  filter: brightness(0.6);
 }
 
 .logo-img {
@@ -126,7 +141,7 @@
 }
 
 .card-logo-hover:hover {
-  filter: brightness(0.9);
+  filter: brightness(0.8);
 }
 
 /* FOOTER */
@@ -190,4 +205,32 @@
 
 .ponderaciones-link:hover {
   color: var(--naranja-resalt);
+}
+
+/* Tabla */
+.estilos-tabla td,
+.estilos-tabla th {
+  padding: 0.4rem 0.5rem;
+  vertical-align: middle;
+}
+
+.estilos-tabla {
+  border: 2px solid var(--bs-primary);
+  font-size: large;
+}
+
+.estilos-tabla thead th {
+  background-color: var(--violeta);
+  font-weight: 600;
+}
+
+.estilos-tabla tbody th {
+  background-color: var(--violeta);
+  font-weight: 600;
+  width: 110px;
+}
+
+/* ==== CONTACTO.HTML ==== */
+.contacto .form-control {
+  border: 1px solid var(--naranja-resalt);
 }
