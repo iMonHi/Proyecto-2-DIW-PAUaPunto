@@ -12,12 +12,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/pulse/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
 </head>
-<body class="index">
+<body id="top" class="index">
+<a href="#main" class="visually-hidden-focusable">Saltar al contenido</a>
+
 <!-- BARRA DE NAVEGACIÓN -->
 <nav class="navbar navbar-expand-lg bg-primary sticky-top" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand me-4" href="index.html"> 
-        <img src="img/logo nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
+        <img src="img/logo_nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -64,6 +66,7 @@
       </ul>
 
       <form id="siteSearchForm" class="d-flex">
+        <label for="siteSearchInput" class="visually-hidden">Buscar en la web</label>
         <input id="siteSearchInput" class="form-control me-sm-2" type="search" placeholder="Busca aquí">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Búsqueda</button>
       </form>
@@ -71,7 +74,7 @@
   </div>
 </nav>
 
-<main class="section-degradado">
+<main id="main" class="section-degradado">
 
 <!-- SECCIÓN: TELEGRAM -->
   <section id="telegram" class="pt-5 px-3 px-md-5">
@@ -85,8 +88,8 @@
     </div>
   </section>
 
-<!-- SECCIÓN: TELEGRAM -->
-  <section id="telegram" class="py-5 px-3 px-md-5">
+<!-- SECCIÓN: CONTACTO -->
+  <section id="contacto" class="py-5 px-3 px-md-5">
     <div class="container">
       <div class="row justify-content-center">
           <div class="col-md-8">
@@ -101,22 +104,22 @@
                           
                           <div class="mb-3">
                               <label for="nombre" class="form-label">Nombre *</label>
-                              <input type="text" name="Nombre" class="form-control" required>
+                              <input id="nombre" type="text" name="Nombre" class="form-control" required>
                           </div>
 
                           <div class="mb-3">
                               <label for="apellidos" class="form-label">Apellidos</label>
-                              <input type="text" name="Apellidos" class="form-control">
+                              <input id="apellidos" type="text" name="Apellidos" class="form-control">
                           </div>
 
                           <div class="mb-3">
                               <label for="email" class="form-label">Correo electrónico *</label>
-                              <input type="email" name="Email" class="form-control" required>
+                              <input id="email" type="email" name="Email" class="form-control" required>
                           </div>
 
                           <div class="mb-3">
                               <label for="mensaje" class="form-label">Mensaje</label>
-                              <textarea name="Mensaje" class="form-control" rows="4" placeholder="Escribe tu duda aquí..."></textarea>
+                              <textarea id="mensaje" name="Mensaje" class="form-control" rows="4" placeholder="Escribe tu duda aquí..."></textarea>
                           </div>
 
                           <div class="my-2 text-center">
@@ -133,7 +136,7 @@
 
 </main>
 
-<a href="contacto.html" class="btn-top back-to-top btn my-5 mx-3 position-fixed bottom-0 end-0 shadow" aria-label="Volver al inicio de la página">Volver al inicio</a>
+<a href="#top" class="btn-top back-to-top btn my-5 mx-3 position-fixed bottom-0 end-0 shadow" aria-label="Volver al inicio de la página">Volver al inicio</a>
 
 <!-- Footer (ayroui template) -->
 <footer class="bg-primary text-white pt-4">
@@ -143,14 +146,14 @@
       <!-- Marca / descripción -->
       <div class="col-md-4">
         <a class="navbar-brand me-4 pb-3" href="index.html"> 
-          <img src="img/logo nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
+          <img src="img/logo_nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
         </a>
         <p class="text-white-50 small">Plataforma educativa ficticia para ayudar a estudiantes de la CCVV a preparar la PAU de forma clara y organizada.</p>
       </div>
 
       <!-- Columna 1 -->
       <div class="col-6 col-md-2">
-        <h6 class="fw-semibold mb-3">Recursos</h6>
+        <h2 class="fw-semibold mb-3">Recursos</h2>
         <ul class="list-unstyled">
           <li><a href="#modelos" class="footer-link">Modelos PAU</a></li>
           <li><a href="#calculadora" class="footer-link">Calculadora</a></li>
@@ -160,7 +163,7 @@
 
       <!-- Columna 2 -->
       <div class="col-6 col-md-2">
-        <h6 class="fw-semibold mb-3">Información</h6>
+        <h2 class="fw-semibold mb-3">Información</h2>
         <ul class="list-unstyled">
           <li><a href="#universidades" class="footer-link">Universidades</a></li>
           <li><a href="agenda.html" class="footer-link">Agenda</a></li>
@@ -169,7 +172,7 @@
 
       <!-- Columna 3 -->
       <div class="col-12 col-md-4">
-        <h6 class="fw-semibold mb-3">Aviso</h6>
+        <h2 class="fw-semibold mb-3">Aviso</h2>
         <p class="text-white-50 small mb-0">
           Proyecto ficticio realizado con fines educativos y de portfolio.
           No existe relación institucional con las entidades mencionadas.
@@ -195,11 +198,11 @@
 </footer>
 
 <!-- Modal para resutlados del buscaor -->
-<div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="searchModal" role="dialog" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Resultados de búsqueda</h5>
+        <h3 class="modal-title" id="searchModalLabel">Resultados de búsqueda</h3>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body">

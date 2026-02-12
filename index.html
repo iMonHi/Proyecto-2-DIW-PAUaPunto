@@ -12,12 +12,15 @@
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/pulse/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
 </head>
-<body class="index">
+
+<body id="top" class="index">
+<a href="#main" class="visually-hidden-focusable">Saltar al contenido</a>
+
 <!-- BARRA DE NAVEGACIÓN -->
 <nav class="navbar navbar-expand-lg bg-primary sticky-top" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand me-4" href="index.html"> 
-        <img src="img/logo nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
+        <img src="img/logo_nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -28,7 +31,7 @@
         <li class="nav-item dropdown">
           <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" href="agenda.html" role="button" aria-haspopup="true" aria-expanded="false">Agenda</a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" href="agenda.html#guia">Guía del estudiante</a>
+            <a class="dropdown-item" href="agenda.html">Guía del estudiante</a>
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="agenda.html#calendario">Calendario 2026</a>
             <div class="dropdown-divider"></div>
@@ -64,6 +67,7 @@
       </ul>
 
       <form id="siteSearchForm" class="d-flex">
+        <label for="siteSearchInput" class="visually-hidden">Buscar en la web</label>
         <input id="siteSearchInput" class="form-control me-sm-2" type="search" placeholder="Busca aquí">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Búsqueda</button>
       </form>
@@ -71,11 +75,11 @@
   </div>
 </nav>
 
-<main>
+<main id="main">
 <!-- SECCIÓN 1: HERO -->
 <section id="hero">
   <h1 class="h1 py-4 text-center">
-      <img src="img/logo h1.png" alt="PAU Fácil" class="img-fluid" style="height:64px">
+      <img src="img/logo_h1.png" alt="PAU Fácil" class="img-fluid" style="height:64px">
   </h1>
   <h2 class="text-center py-1">La Web para estudiantes preuniversitarios de la Comunidad Valenciana</h2>
 
@@ -88,7 +92,7 @@
           <div class="card mb-3 card-hover rounded-4" style="max-width: 20rem;">
               <div class="card-header">Agenda PAU 2026</div>
               <div class="card-body">
-                  <h4 class="card-title">PAU sin "caos"</h4>
+                  <h3 class="card-title">PAU sin "caos"</h3>
                   <p class="card-text">Conoce el calendario PAU, horario de exámenes e información fundamental para el estudiante.</p>
               </div>
           </div>
@@ -101,7 +105,7 @@
           <div class="card mb-3 card-hover rounded-4" style="max-width: 20rem;">
               <div class="card-header">Calculadora PAU</div>
               <div class="card-body">
-                  <h4 class="card-title">Conoce tu nota</h4>
+                  <h3 class="card-title">Conoce tu nota</h3>
                   <p class="card-text">Comprueba las ponderaciones de la CCVV y calcula tu nota de acceso a la Universidad.</p>
               </div>
           </div>
@@ -113,7 +117,7 @@
           <div class="card mb-3 card-hover rounded-4" style="max-width: 20rem;">
               <div class="card-header">Exámenes</div>
               <div class="card-body">
-                  <h4 class="card-title">Practica con modelos</h4>
+                  <h3 class="card-title">Practica con modelos</h3>
                   <p class="card-text">Practica con modelos oficiales de exámenes de convocatorioas anteriores. ¡De todas las asignaturas!</p>
               </div>
           </div>
@@ -125,7 +129,7 @@
           <div class="card mb-3 card-hover rounded-4" style="max-width: 20rem;">
               <div class="card-header">Prepárate</div>
               <div class="card-body">
-                  <h4 class="card-title">Estudia con cabeza</h4>
+                  <h3 class="card-title">Estudia con cabeza</h3>
                   <p class="card-text">Aprende las mejores herramientas de estudio y practica potentes técnicas de relajación.</p>
               </div>
           </div>
@@ -137,7 +141,7 @@
           <div class="card mb-3 card-hover rounded-4" style="max-width: 20rem;">
               <div class="card-header">Hábitos poderosos</div>
               <div class="card-body">
-                  <h4 class="card-title">Mejora tu rendimiento</h4>
+                  <h3 class="card-title">Mejora tu rendimiento</h3>
                   <p class="card-text">Descubre hábitos saludables y científicos que potencian tu rendimiento académico.</p>
               </div>
           </div>
@@ -149,7 +153,7 @@
           <div class="card mb-3 card-hover rounded-4" style="max-width: 20rem;">
               <div class="card-header">Universidades</div>
               <div class="card-body">
-                  <h4 class="card-title">Explora universidades</h4>
+                  <h3 class="card-title">Explora universidades</h3>
                   <p class="card-text">Investiga sobre las principales universidades españolas y encuentra los estudios perfectos para ti.</p>
               </div>
           </div>
@@ -227,7 +231,7 @@
 
       <div class="text-center text-wrap formula-style">
         <span class="fw-bold ms-2">Resultado (sobre 14 ptos.): </span>
-        <input id="result" class="form-control form-control-sm d-inline-block text-center ms-2" type="text" placeholder="--.--" readonly aria-label="Resultado"/>
+        <input id="result" class="form-control form-control-sm d-inline-block text-center ms-2" type="text" placeholder="--.--" readonly aria-label="Resultado">
       </div>
 
       </form>
@@ -295,7 +299,7 @@
 
         <div class="text-center text-wrap formula-style">
           <span class="fw-bold ms-2">Resultado (sobre 14 ptos.): </span>
-          <input id="resultFp" class="form-control form-control-sm d-inline-block text-center ms-2" type="text" placeholder="--.--" readonly aria-label="Resultado"/>
+          <input id="resultFp" class="form-control form-control-sm d-inline-block text-center ms-2" type="text" placeholder="--.--" readonly aria-label="Resultado">
         </div>
       </form>
     </div>
@@ -422,7 +426,7 @@
       <div class="row g-0">
         
         <div class="col-md-5">
-          <img src="img/imagen 10.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="">
+          <img src="img/imagen_10.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="">
         </div>
 
         <div class="col-md-7 bg-primary text-white d-flex align-items-center">
@@ -452,7 +456,7 @@
         </div>
 
         <div class="col-md-5 order-1 order-md-2">
-          <img src="img/imagen 11.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="">
+          <img src="img/imagen_11.jpg" class="img-fluid w-100 h-100 object-fit-cover" alt="">
         </div>
       </div>
     </div>
@@ -494,7 +498,7 @@
 
         <div class="col-md-5">
           <a href="https://geogrados.gva.es/grados/?idioma=es" target="_blank" rel="noopener noreferrer" class="d-block h-100 image-link">
-            <img src="img/Mapa interactivo CCVV.png" class="w-100 h-100 object-fit-cover" alt="Recorte de la página oficial de la GVA (mapa interactivo)"></a>
+            <img src="img/Mapa_interactivo_CCVV.png" class="w-100 h-100 object-fit-cover" alt="Recorte de la página oficial de la GVA (mapa interactivo)"></a>
         </div>
 
         <div class="col-md-7 bg-primary text-white d-flex align-items-center">
@@ -519,7 +523,7 @@
       <a class="logo-link" href="https://www.uv.es/" target="_blank" rel="noopener noreferrer">
         <div class="card h-100 border-0 shadow-sm card-style-1 text-center rounded-4 overflow-hidden card-logo-hover">
           <div class="pt-2 d-flex justify-content-center">
-            <img src="img/UV logo.jpg" class="logo-img" alt="logo UV">
+            <img src="img/UV_logo.jpg" class="logo-img" alt="logo UV">
           </div>
           <div class="card-body">
             <h4 class="fw-bold fs-6">Universitat de València</h4>
@@ -532,7 +536,7 @@
       <a class="logo-link" href="https://www.upv.es/" target="_blank" rel="noopener noreferrer">
         <div class="card h-100 border-0 shadow-sm card-style-1 text-center rounded-4 overflow-hidden card-logo-hover">
           <div class="pt-2 d-flex justify-content-center">
-            <img src="img/UPV logo.jpg" class="logo-img" alt="logo UPV">
+            <img src="img/UPV_logo.jpg" class="logo-img" alt="logo UPV">
           </div>
           <div class="card-body">
             <h4 class="fw-bold fs-6">Universitat Politècnica de València</h4>
@@ -545,7 +549,7 @@
       <a class="logo-link" href="https://www.uji.es/" target="_blank" rel="noopener noreferrer">
         <div class="card h-100 border-0 shadow-sm card-style-1 text-center rounded-4 overflow-hidden card-logo-hover">
           <div class="pt-2 d-flex justify-content-center">
-            <img src="img/UJI logo.png" class="logo-img" alt="logo UJI">
+            <img src="img/UJI_logo.png" class="logo-img" alt="logo UJI">
           </div>
           <div class="card-body">
             <h4 class="fw-bold fs-6">Universitat Jaume I</h4>
@@ -558,7 +562,7 @@
       <a class="logo-link" href="https://www.ua.es/" target="_blank" rel="noopener noreferrer">
         <div class="card h-100 border-0 shadow-sm card-style-1 text-center rounded-4 overflow-hidden card-logo-hover">
           <div class="pt-2 d-flex justify-content-center">
-            <img src="img/UA logo.png" class="logo-img" alt="logo UA">
+            <img src="img/UA_logo.png" class="logo-img" alt="logo UA">
           </div>
           <div class="card-body">
             <h4 class="fw-bold fs-6">Universidad de Alicante</h4>
@@ -571,7 +575,7 @@
       <a class="logo-link" href="https://www.umh.es/" target="_blank" rel="noopener noreferrer">
         <div class="card h-100 border-0 shadow-sm card-style-1 text-center rounded-4 overflow-hidden card-logo-hover">
           <div class="pt-2 d-flex justify-content-center">
-            <img src="img/UMH logo.jpg" class="logo-img" alt="logo UMH">
+            <img src="img/UMH_logo.jpg" class="logo-img" alt="logo UMH">
           </div>
           <div class="card-body">
             <h4 class="fw-bold fs-6">Universitas Miguel Hernández</h4>
@@ -583,7 +587,7 @@
 </section>
 </main>
 
-<a href="#hero" class="btn-top back-to-top btn my-5 mx-3 position-fixed bottom-0 end-0 shadow" aria-label="Volver al inicio de la página">Volver al inicio</a>
+<a href="#top" class="btn-top back-to-top btn my-5 mx-3 position-fixed bottom-0 end-0 shadow" aria-label="Volver al inicio de la página">Volver al inicio</a>
 
 <!-- Footer (ayroui template) -->
 <footer class="bg-primary text-white pt-4">
@@ -593,14 +597,14 @@
       <!-- Marca / descripción -->
       <div class="col-md-4">
         <a class="navbar-brand me-4 pb-3" href="index.html"> 
-          <img src="img/logo nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
+          <img src="img/logo_nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
         </a>
         <p class="text-white-50 small">Plataforma educativa ficticia para ayudar a estudiantes de la CCVV a preparar la PAU de forma clara y organizada.</p>
       </div>
 
       <!-- Columna 1 -->
       <div class="col-6 col-md-2">
-        <h6 class="fw-semibold mb-3">Recursos</h6>
+        <h5 class="fw-semibold mb-3">Recursos</h5>
         <ul class="list-unstyled">
           <li><a href="#modelos" class="footer-link">Modelos PAU</a></li>
           <li><a href="#calculadora" class="footer-link">Calculadora</a></li>
@@ -610,7 +614,7 @@
 
       <!-- Columna 2 -->
       <div class="col-6 col-md-2">
-        <h6 class="fw-semibold mb-3">Información</h6>
+        <h5 class="fw-semibold mb-3">Información</h5>
         <ul class="list-unstyled">
           <li><a href="#universidades" class="footer-link">Universidades</a></li>
           <li><a href="agenda.html" class="footer-link">Agenda</a></li>
@@ -619,7 +623,7 @@
 
       <!-- Columna 3 -->
       <div class="col-12 col-md-4">
-        <h6 class="fw-semibold mb-3">Aviso</h6>
+        <h5 class="fw-semibold mb-3">Aviso</h5>
         <p class="text-white-50 small mb-0">
           Proyecto ficticio realizado con fines educativos y de portfolio.
           No existe relación institucional con las entidades mencionadas.
@@ -645,11 +649,11 @@
 </footer>
 
 <!-- Modal para resultados del buscaor -->
-<div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="searchModal" role="dialog" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Resultados de búsqueda</h5>
+        <h5 class="modal-title" id="searchModalLabel">Resultados de búsqueda</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body">

@@ -12,12 +12,14 @@
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.8/dist/pulse/bootstrap.min.css" rel="stylesheet">
     <link href="css/estilos.css" rel="stylesheet">
 </head>
-<body class="index">
+<body id="top" class="index">
+<a href="#main" class="visually-hidden-focusable">Saltar al contenido</a>
+
 <!-- BARRA DE NAVEGACIÓN -->
 <nav class="navbar navbar-expand-lg bg-primary sticky-top" data-bs-theme="dark">
   <div class="container-fluid">
     <a class="navbar-brand me-4" href="index.html"> 
-        <img src="img/logo nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
+        <img src="img/logo_nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -64,6 +66,7 @@
       </ul>
 
       <form id="siteSearchForm" class="d-flex">
+        <label for="siteSearchInput" class="visually-hidden">Buscar en la web</label>
         <input id="siteSearchInput" class="form-control me-sm-2" type="search" placeholder="Busca aquí">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Búsqueda</button>
       </form>
@@ -71,7 +74,7 @@
   </div>
 </nav>
 
-<main>
+<main id="main">
 
   <h1 class="text-center resaltado pt-5 pb-3 display-6 fw-bold px-3 px-md-5">Todo lo que necesitas saber sobre las PAU 2026</h1>
 
@@ -142,7 +145,7 @@
 
           <div class="col-12 col-md-4 d-none d-md-block">
               <div class="card border-0 bg-primary text-white shadow rounded-3">
-                  <img src="img/imagen-12.jpg" class="card-img-top rounded-3" alt="Agenda">
+                  <img src="img/imagen_12.jpg" class="card-img-top rounded-3" alt="Agenda">
                   <div class="card-body text-center">
                       <h5 class="card-title">La importancia de la agenda:</h5>
                       <p class="card-text small">Tener una agenda bien organizada te ayudará a controlar fechas y a planificar tu estudio.</p>
@@ -151,43 +154,47 @@
           </div>
 
 
-    <!-- Características exámenes -->
-    <h3 class="pt-5 bb-3 fw-bold">2. Características de los exámenes</h3>
+          <!-- Características exámenes -->
+          <h3 class="pt-5 bb-3 fw-bold">2. Características de los exámenes</h3>
 
-    <div class="container">
-      <div class="mx-auto">
-        <div class="row align-items-center">
-          <div class="col-12">
-            <p>Por norma general, los exámenes suelen tener las siguientes características:</p>
-            <ul>
-              <li><strong>Duración: </strong>1 hora y media cada examen</li>
-              <li><strong>Descanso: </strong>45 minutos entre exámenes.</li>
-              <li><strong>Nota:</strong> de 0 a 10, con dos decimales.</li>
-              <li>Cada examen tendrá <strong>una única opción</strong> con preguntas variadas; contestarás según el criterio de optatividad indicado en el propio examen.</li>
-              <li>¡OJO! Hay penalizaciones por <strong>faltas de ortografía.</strong></li>
-              <li>La <strong>nota de acceso a la titulación </strong>se calcula con la nota de acceso a la universidad (40% F. Obligatoria + 60% media Bachillerato) sumado a los dos exámenes ponderados.</li>
-              <li>En FP, la <strong>nota de acceso a la titulación </strong>se calcula con la media de FP sumado a los dos exámenes ponderados.</li>
-              <li>La <strong>media de los exámenes realizados en la Fase Obligatoria</strong> debe ser,como mínimo, un 4.</li>
-              <li>Las notas que ponderan valen para admisión durante los 3 cursos siguientes.</li>
-            </ul>
-            <p><strong><mark>¡IMPORTANTE!</mark></strong> Recuerda que, si tienes algún tipo de <strong>necesidad educativa</strong>, puedes pedir adaptaciones para los exámenes a principio de. Infórmate a través del Dpto. de Orientación de tu centro educativo a principio de curso.</p>
+          <div class="container">
+            <div class="mx-auto">
+              <div class="row align-items-center">
+                <div class="col-12">
+                  <p>Por norma general, los exámenes suelen tener las siguientes características:</p>
+                  <ul>
+                    <li><strong>Duración: </strong>1 hora y media cada examen</li>
+                    <li><strong>Descanso: </strong>45 minutos entre exámenes.</li>
+                    <li><strong>Nota:</strong> de 0 a 10, con dos decimales.</li>
+                    <li>Cada examen tendrá <strong>una única opción</strong> con preguntas variadas; contestarás según el criterio de optatividad indicado en el propio examen.</li>
+                    <li>¡OJO! Hay penalizaciones por <strong>faltas de ortografía.</strong></li>
+                    <li>La <strong>nota de acceso a la titulación </strong>se calcula con la nota de acceso a la universidad (40% F. Obligatoria + 60% media Bachillerato) sumado a los dos exámenes ponderados.</li>
+                    <li>En FP, la <strong>nota de acceso a la titulación </strong>se calcula con la media de FP sumado a los dos exámenes ponderados.</li>
+                    <li>La <strong>media de los exámenes realizados en la Fase Obligatoria</strong> debe ser,como mínimo, un 4.</li>
+                    <li>Las notas que ponderan valen para admisión durante los 3 cursos siguientes.</li>
+                  </ul>
+                  <p><strong><mark>¡IMPORTANTE!</mark></strong> Recuerda que, si tienes algún tipo de <strong>necesidad educativa</strong>, puedes pedir adaptaciones para los exámenes a principio de. Infórmate a través del Dpto. de Orientación de tu centro educativo a principio de curso.</p>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
-    </div>
 
-    <!-- Decisiones del alumnado -->
-    <h3 class="pt-5 pb-3 fw-bold text-center">¿Qué debes decidir?</h3>
+          <!-- Decisiones del alumnado -->
+          <h3 class="pt-5 pb-3 fw-bold text-center">¿Qué debes decidir?</h3>
 
-    <div class="container pb-3">
-      <div class="row  align-items-center">
-        <div class="col-12 bg-primary text-white rounded p-4">
-          <ul class="mb-0 fs-5">
-            <li>El idioma de Lengua Extranjera II (recuerda: cursada o no cursada) para la F. Obligatoria. </li>
-            <li>Historia de España o Historia de la Filosofía para la F. Obligatoria.</li>
-            <li>La materia de modalidad para la F. Obligatoria. </li>
-            <li>Si vas a por nota alta: recomendable 2–3 materias para la F. Voluntaria que mejor ponderen. </li>
-          </ul>
+          <div class="container pb-3">
+            <div class="row  align-items-center">
+              <div class="col-12 bg-primary text-white rounded p-4">
+                <ul class="mb-0 fs-5">
+                  <li>El idioma de Lengua Extranjera II (recuerda: cursada o no cursada) para la F. Obligatoria. </li>
+                  <li>Historia de España o Historia de la Filosofía para la F. Obligatoria.</li>
+                  <li>La materia de modalidad para la F. Obligatoria. </li>
+                  <li>Si vas a por nota alta: recomendable 2–3 materias para la F. Voluntaria que mejor ponderen. </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
     </div>
@@ -203,7 +210,7 @@
 
         <div class="col-12 col-md-6">
           <div class="border border-primary rounded-3 h-100 shadow bg-white px-3 pb-3">
-            <h4 class="fw-bold p-4">Convocatoria ordinaria · Junio</h4>
+            <h3 class="fw-bold p-4">Convocatoria ordinaria · Junio</h3>
             <ul>
               <li><strong>Matriculación:</strong> 18–22 de mayo (hasta las 14:00)</li>
               <li><strong>Exámenes:</strong> 2, 3 y 4 de junio<br>
@@ -231,7 +238,7 @@
 
         <div class="col-12 col-md-6">
           <div class="border border-primary rounded-3 h-100 shadow bg-white px-3 pb-3">
-            <h4 class="fw-bold p-4">Convocatoria extraordinaria · Julio</h4>
+            <h3 class="fw-bold p-4">Convocatoria extraordinaria · Julio</h3>
 
             <ul>
               <li><strong>Matriculación:</strong> 15–18 de junio (hasta las 14:00)</li>
@@ -329,7 +336,7 @@
 
           <div class="col-md-5">
             <a href="https://universitats.gva.es/documents/389338055/389339982/Horario_PAU_2026.pdf/50ab62a0-18cf-e860-394b-a665c0fc5998?t=1762169825859" target="_blank" rel="noopener noreferrer" class="d-block h-100 image-link">
-              <img src="img/horario 2.jpg" class="w-100 h-100 object-fit-cover" alt="Recorte del horario PAU 2026"></a>
+              <img src="img/horario_2.jpg" class="w-100 h-100 object-fit-cover" alt="Recorte del horario PAU 2026"></a>
           </div>
 
           <div class="col-md-7 bg-primary text-white d-flex align-items-center">
@@ -359,7 +366,7 @@
   </section>
 </main>
 
-<a href="#guia" class="btn-top back-to-top btn my-5 mx-3 position-fixed bottom-0 end-0 shadow" aria-label="Volver al inicio de la página">Volver al inicio</a>
+<a href="#top" class="btn-top back-to-top btn my-5 mx-3 position-fixed bottom-0 end-0 shadow" aria-label="Volver al inicio de la página">Volver al inicio</a>
 
 
 <!-- Footer (ayroui template) -->
@@ -370,14 +377,14 @@
       <!-- Marca / descripción -->
       <div class="col-md-4">
         <a class="navbar-brand me-4 pb-3" href="index.html"> 
-          <img src="img/logo nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
+          <img src="img/logo_nav.png" alt="PAU Fácil logo" class="img-fluid" style="height:24px">
         </a>
         <p class="text-white-50 small">Plataforma educativa ficticia para ayudar a estudiantes de la CCVV a preparar la PAU de forma clara y organizada.</p>
       </div>
 
       <!-- Columna 1 -->
       <div class="col-6 col-md-2">
-        <h6 class="fw-semibold mb-3">Recursos</h6>
+        <h4 class="fw-semibold mb-3">Recursos</h4>
         <ul class="list-unstyled">
           <li><a href="index.html#modelos" class="footer-link">Modelos PAU</a></li>
           <li><a href="index.html#calculadora" class="footer-link">Calculadora</a></li>
@@ -387,7 +394,7 @@
 
       <!-- Columna 2 -->
       <div class="col-6 col-md-2">
-        <h6 class="fw-semibold mb-3">Información</h6>
+        <h4 class="fw-semibold mb-3">Información</h4>
         <ul class="list-unstyled">
           <li><a href="index.html#universidades" class="footer-link">Universidades</a></li>
           <li><a href="agenda.html" class="footer-link">Agenda</a></li>
@@ -396,7 +403,7 @@
 
       <!-- Columna 3 -->
       <div class="col-12 col-md-4">
-        <h6 class="fw-semibold mb-3">Aviso</h6>
+        <h4 class="fw-semibold mb-3">Aviso</h4>
         <p class="text-white-50 small mb-0">
           Proyecto ficticio realizado con fines educativos y de portfolio.
           No existe relación institucional con las entidades mencionadas.
@@ -422,11 +429,11 @@
 </footer>
 
 <!-- Modal para resutlados del buscaor -->
-<div class="modal fade" id="searchModal" tabindex="-1" aria-hidden="true">
+<div class="modal fade" id="searchModal" role="dialog" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-lg modal-dialog-scrollable">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title">Resultados de búsqueda</h5>
+        <h5 class="modal-title" id="searchModalLabel">Resultados de búsqueda</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Cerrar"></button>
       </div>
       <div class="modal-body">

@@ -45,7 +45,8 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-#searchModal .list-group-item:hover {
+#searchModal .list-group-item:hover,
+#searchModal .list-group-item:focus-visible {
   background-color: var(--bs-primary);
   color: var(--blanco);
   cursor: pointer;
@@ -55,7 +56,13 @@
 /* ==== INDEX.HTML ==== */
 /* Ajuste Navbar sticky */
 .index section[id] {
-  scroll-margin-top: 35px;
+  scroll-margin-top: 40px;
+}
+
+.nav-item:hover,
+.nav-item:focus-within {
+  font-weight: bold;
+  color: var(--blanco);
 }
 
 /* SECCIÓN 1: HERO */
@@ -64,7 +71,8 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.card-hover:hover {
+.card-hover:hover,
+.card-hover:focus-within {
   background-color: var(--bs-primary);
   color: white;
 }
@@ -81,21 +89,21 @@
 
 /* SECTION 2: HERRAMIENTAS*/
 /* AyroUI Slider 1 (adaptado para plantilla Pulse) */
-.pau-slider .pau-slide{
+.pau-slider .pau-slide {
   min-height: 520px;
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
-.pau-slider .pau-slide::before{
+.pau-slider .pau-slide::before {
   content:"";
   position:absolute;
   inset: 0;
   background: rgba(0,0,0,0.65);
 }
 
-.pau-slider .carousel-caption{
+.pau-slider .carousel-caption {
   position: absolute;
   inset: 0;
   display: flex;
@@ -107,7 +115,7 @@
   position: relative;
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
   .pau-slider .pau-slide{ min-height: 380px; }
 }
 
@@ -159,7 +167,7 @@
 /* ==== TÉCNICAS-HERRAMIENTAS.HTML ==== */
 /* Ajuste Navbar sticky */
 .tecn section[id] {
-  scroll-margin-top: 90px;
+  scroll-margin-top: 125px;
 }
 
 /* Sidebar */
@@ -194,8 +202,25 @@
   transition: color 0.3s ease;
 }
 
-.aside-link-style:hover {
+.aside-link-style:hover
+.aside-link-style:focus-visible {
   color: var(--naranja-resalt);
+}
+
+.video {
+  border: 0;
+}
+
+.boton-tecnicas {
+  background-color: var(--bs-primary);
+  color: var(--blanco);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.boton-tecnicas:hover,
+.boton-tecnicas:focus-visible {
+  background-color: var(--blanco);
+  color: var(--bs-primary);
 }
 
 /* ==== AGENDA.HTML ==== */
@@ -203,7 +228,8 @@
   transition: color 0.3 ease;
 }
 
-.ponderaciones-link:hover {
+.ponderaciones-link:hover,
+.ponderaciones-link:focus-visible {
   color: var(--naranja-resalt);
 }
 
