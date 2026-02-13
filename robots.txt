@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://imonhi.github.io/PAUaPunto/sitemap.xml
