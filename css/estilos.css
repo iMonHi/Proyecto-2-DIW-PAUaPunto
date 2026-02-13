@@ -52,17 +52,21 @@
   cursor: pointer;
 }
 
+/* Navbar contraste */
+.navbar .nav-link {
+    color: #ffffff !important;
+    font-weight: bold;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus-within {
+    color: #ff9900 !important;
+}
 
 /* ==== INDEX.HTML ==== */
 /* Ajuste Navbar sticky */
 .index section[id] {
   scroll-margin-top: 40px;
-}
-
-.nav-item:hover,
-.nav-item:focus-within {
-  font-weight: bold;
-  color: var(--blanco);
 }
 
 /* SECCIÓN 1: HERO */
@@ -259,6 +263,16 @@
 /* ==== CONTACTO.HTML ==== */
 .contacto .form-control {
   border: 1px solid var(--naranja-resalt);
+}
+
+/* ==== Botón back-to-top ==== */
+.back-to-top {
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+.back-to-top:hover {
+  background-color: #5a32a3;
+  color: #ffffff;
 }
 
 /* ==== Cookies ==== */

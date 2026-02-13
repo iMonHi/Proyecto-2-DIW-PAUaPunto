@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://imonhi.github.io/PAUaPunto/sitemap.xml
+Sitemap: https://imonhi.github.io/Proyecto-2-DIW-PAUaPunto/sitemap.xml

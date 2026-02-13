@@ -5,8 +5,8 @@ GitHub: https://github.com/iMonHi
 
 /* SITE */
 Project: PAUaPunto - webpara estudiantes preuniversitarios
-Repository: https://github.com/iMonHi/PAUaPunto
-URL: https://imonhi.github.io/PAUaPunto/
+Repository: https://github.com/iMonHi/Proyecto-2-DIW-PAUaPunto.git
+URL: https://imonhi.github.io/Proyecto-2-DIW-PAUaPunto/
 Last update: 2026-02-14
 Language: es-ES
 Technologies: HTML5, CSS3, JS
