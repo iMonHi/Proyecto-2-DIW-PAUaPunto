@@ -260,3 +260,14 @@
 .contacto .form-control {
   border: 1px solid var(--naranja-resalt);
 }
+
+/* ==== Cookies ==== */
+.cookie-banner {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #2d3237;
+  color: white;
+  padding: 15px;
+  z-index: 9999;
+}

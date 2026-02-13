@@ -52,15 +52,20 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#calculadora">Calculadora PAU
+          <a class="nav-link" href="index.html#calculadora">Calculadora PAU
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#modelos">Exámenes</a>
+          <a class="nav-link" href="index.html#modelos">Exámenes</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#universidades">Universidades
+          <a class="nav-link" href="index.html#universidades">Universidades
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="contacto.html">Contacto
           </a>
         </li>
       </ul>
@@ -98,7 +103,7 @@
               </div>
 
               <div class="contacto card border-0 mb-3 rounded-3 shadow">
-                  <div class="card-body fs-5">
+                  <div class="card-body fs-6">
                       <p class="mt-3 mb-5 fw-bold">Puedes enviarnos tus dudas, te las resolveremos en el menor plazo posible.</p>
                       <form action="mailto:mh92@.isabel@gmail.com" method="POST">
                           
@@ -122,8 +127,24 @@
                               <textarea id="mensaje" name="Mensaje" class="form-control" rows="4" placeholder="Escribe tu duda aquí..."></textarea>
                           </div>
 
+                          <div class="mb-3 form-check">
+                            <input 
+                              class="form-check-input" 
+                              type="checkbox" 
+                              id="aceptoPrivacidad" 
+                              name="aceptoPrivacidad" 
+                              required>
+                              
+                            <label class="form-check-label" for="aceptoPrivacidad">
+                              He leído y acepto la 
+                              <a href="privacidad.html" target="_blank">
+                                Política de Privacidad.
+                              </a>
+                            </label>
+                          </div>
+
                           <div class="my-2 text-center">
-                              <button type="submit" class="btn btn-primary rounded-pill fs-4">Enviar mensaje</button>
+                              <button type="submit" class="btn btn-primary rounded-pill fs-5">Enviar mensaje</button>
                           </div>
                           <p class="fst-italic fw-lighter text-center">(Se abrirá tu aplicación de correo.)</p>
                       </form>
@@ -189,8 +210,8 @@
         © 2026 PAUaPunto · Proyecto educativo DAW - Isabel Monzonís
       </small>
       <div class="d-flex gap-3">
-        <a href="#" class="footer-link small">Privacidad</a>
-        <a href="#" class="footer-link small">Aviso legal</a>
+        <a href="privacidad.html" class="footer-link small">Privacidad</a>
+        <a href="aviso-legal.html" class="footer-link small">Aviso legal</a>
         <a href="#" class="footer-link small">Contacto</a>
       </div>
     </div>
@@ -210,6 +231,15 @@
         <div class="list-group" id="searchResults"></div>
       </div>
     </div>
+  </div>
+</div>
+
+<!-- Aviso cookies -->
+<div id="cookieBanner" class="cookie-banner">
+  <div class="container text-center">
+    <p class="mb-2">Este sitio utiliza cookies de terceros (como YouTube) para mostrar contenido incrustado. Puedes aceptarlas o rechazarlas.<a href="cookies.html">Más información</a></p>
+    <button id="acceptCookies" class="btn btn-primary btn-sm me-2">Aceptar</button>
+    <button id="rejectCookies" class="btn btn-outline-light btn-sm">Rechazar</button>
   </div>
 </div>
 

@@ -167,3 +167,32 @@ function initSiteSearch() {
     new bootstrap.Modal(modalEl).show();
   });
 }
+
+
+//-----> Banner de Cookies
+document.addEventListener("DOMContentLoaded", function () {
+
+  const banner = document.getElementById("cookieBanner");
+
+  // Por si ya aceptó anteriormente
+  if (localStorage.getItem("cookiesAccepted") === "true" ||
+      localStorage.getItem("cookiesAccepted") === "false") {
+    banner.style.display = "none";
+  }
+
+  // Si el usuario acepta
+  document.getElementById("acceptCookies").addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    banner.style.display = "none";
+  });
+
+  // Si el usuario no acepta (pasa lo mismo)
+  document.getElementById("rejectCookies").addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "false");
+    banner.style.display = "none";
+  });
+
+  // Nota: El JS no bloquea las cookies realmente porque la página carga los iframes de Youtube desde el principio: aunque el usuario rechace, los vídeos se muestran.
+
+});
+
