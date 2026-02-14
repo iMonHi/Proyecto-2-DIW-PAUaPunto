@@ -116,13 +116,15 @@
 /* SECCIÓN 1: HERO */
 .card-hover {
   background-color: var(--bs-light);
-  transition: background-color 0.3s ease, color 0.3s ease;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.15s ease, box-shadow 0.3s ease;
 }
 
 .card-hover:hover,
 .card-hover:focus-within {
   background-color: var(--bs-primary);
   color: white;
+  transform: translateY(-10px);
+  box-shadow: 0 0.4rem 1rem rgba(122, 122, 122, 0.25);
 }
 
 /* CÁLCULO NOTA NAU */
@@ -327,6 +329,8 @@
 .back-to-top:hover {
   background-color: #5a32a3;
   color: #ffffff;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
 }
 
 /* ==== Cookies ==== */
