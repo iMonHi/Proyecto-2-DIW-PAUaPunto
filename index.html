@@ -196,18 +196,22 @@
         = (
 
         <span class="fw-bold text-primary">MB</span>
-        <input id="mb" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" inputmode="decimal" min="0" max="10" step="0.01" placeholder="0.00" aria-label="MB">
+        <label for="mb" class="visually-hidden">Media de Bachillerato (MB)</label>
+        <input id="mb" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" inputmode="decimal" min="0" max="10" step="0.01" placeholder="0.00">
         × 0.6 +
 
         <span class="fw-bold text-primary">MFO</span>
+        <label for="mfo" class="visually-hidden">Media Fase Obligatoria PAU (MFO)</label>
         <input id="mfo" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" inputmode="decimal" min="0" max="10" step="0.01" placeholder="0.00" aria-label="MFO">
         × 0.4) + (
 
         <span class="fw-bold text-primary">M1</span>
+        <label for="m1" class="visually-hidden">nota materia 1 (M1)</label>
         <input id="m1" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" inputmode="decimal" min="0" max="10" step="0.01" placeholder="0.00" aria-label="M1">
         ×
 
         <span class="fw-bold text-primary">P1</span>
+        <label for="p1" class="visually-hidden">ponderación materia 1</label>
         <select id="p1" class="form-select form-select-sm d-inline-block nota-input" aria-label="P1">
           <option value="0" selected>0</option>
           <option value="0.1">0.1</option>
@@ -216,9 +220,11 @@
         ) + (
 
         <span class="fw-bold text-primary">M2</span>
+        <label for="m2" class="visually-hidden">nota materia 2 (M2)</label>
         <input id="m2" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" min="0" max="10" step="0.01" inputmode="decimal" placeholder="0.0" aria-label="M2">
         ×
         <span class="fw-bold text-primary">P2</span>
+        <label for="p2" class="visually-hidden">ponderación materia 2</label>
         <select id="p2" class="form-select form-select-sm d-inline-block nota-input" aria-label="P2">
           <option value="0" selected>0</option>
           <option value="0.1">0.1</option>
@@ -236,6 +242,7 @@
 
       <div class="text-center text-wrap formula-style">
         <span class="fw-bold ms-2">Resultado (sobre 14 ptos.): </span>
+        <label for="result" class="visually-hidden">nota final obtenida</label>
         <input id="result" class="form-control form-control-sm d-inline-block text-center ms-2" type="text" placeholder="--.--" readonly aria-label="Resultado">
       </div>
 
@@ -267,15 +274,18 @@
           =
 
           <span class="fw-bold text-primary">MFP</span>
+          <label for="mfp" class="visually-hidden">media de la titulación de FP</label>
           <input id="mfp" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" inputmode="decimal" min="0" max="10" step="0.01" 
           placeholder="0.00" aria-label="MFP">
           + (
 
           <span class="fw-bold text-primary">M1</span>
+          <label for="m1fp" class="visually-hidden">nota materia 1 (M1)</label>
           <input id="m1fp" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" inputmode="decimal" min="0" max="10" step="0.01" placeholder="0.00" aria-label="M1">
           ×
 
           <span class="fw-bold text-primary">P1</span>
+          <label for="p1fp" class="visually-hidden">ponderación materia 1</label>
           <select id="p1fp" class="form-select form-select-sm d-inline-block nota-input" aria-label="P1">
             <option value="0" selected>0</option>
             <option value="0.1">0.1</option>
@@ -284,10 +294,12 @@
           ) + (
 
           <span class="fw-bold text-primary">M2</span>
+          <label for="m2fp" class="visually-hidden">nota materia 2 (M2)</label>
           <input id="m2fp" class="form-control form-control-sm d-inline-block text-center nota-input" type="number" inputmode="decimal" min="0" max="10" step="0.01" placeholder="0.00" aria-label="M2">
           ×
 
           <span class="fw-bold text-primary">P2</span>
+          <label for="p2fp" class="visually-hidden">ponderación materia 2</label>
           <select id="p2fp" class="form-select form-select-sm d-inline-block nota-input" aria-label="P2">
             <option value="0" selected>0</option>
             <option value="0.1">0.1</option>
@@ -304,6 +316,7 @@
 
         <div class="text-center text-wrap formula-style">
           <span class="fw-bold ms-2">Resultado (sobre 14 ptos.): </span>
+          <label for="result" class="visually-hidden">nota final obtenida</label>
           <input id="resultFp" class="form-control form-control-sm d-inline-block text-center ms-2" type="text" placeholder="--.--" readonly aria-label="Resultado">
         </div>
       </form>

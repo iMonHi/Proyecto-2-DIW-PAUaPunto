@@ -3,7 +3,27 @@
   --violeta: #c6b2f5;
   --naranja-resalt: #AD4500;
   --blanco: #fff;
+  --naranja: #ff9900;
+  --focus-ring: 3px solid var(--naranja);
+  --focus-offset: 3px; /* separación contorno-objeto */
 }
+
+/* ==== AJUSTES GLOBALES ==== */
+/* Focus-visible: para teclado */
+:where(a, button, input, select, textarea):focus-visible { 
+  outline: var(--focus-ring);
+  outline-offset: var(--focus-offset);
+}
+
+:where(input, select, textarea):focus-visible {
+  box-shadow: 0 0 0 0.2rem rgba(255,153,0,0.35);
+}
+
+/* Focus: ratón y teclado. Se elimina lo indicado arriba para ratón */
+:where(a, button, input, select, textarea):focus { 
+  outline: none;
+}
+
 
 @media (min-width: 1200px) {
     html {
@@ -11,7 +31,6 @@
     }
 }
 
-/* ==== AJUSTES GLOBALES ==== */
 .section-degradado {
   background: var(--violeta-pastel);
 }
@@ -50,6 +69,8 @@
   background-color: var(--bs-primary);
   color: var(--blanco);
   cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
 }
 
 /* Navbar contraste */
@@ -60,7 +81,30 @@
 
 .navbar .nav-link:hover,
 .navbar .nav-link:focus-within {
-    color: #ff9900 !important;
+    color: var(--naranja) !important;
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    text-decoration-thickness: 0.15em;
+}
+
+/* Botones clave de la web */
+#telegramBtn,
+#calcBtn,
+#calcBtnFp,
+#contacto button[type="submit"] {
+  transition: background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease, transform 0.15s ease, font-weight 0.3s ease;
+  border: none;
+}
+
+#telegramBtn:hover, #telegramBtn:focus-visible,
+#calcBtn:hover, #calcBtn:focus-visible,
+#calcBtnFp:hover, #calcBtnFp:focus-visible,
+#contacto button[type="submit"]:hover, #contacto button[type="submit"]:focus-visible {
+  background-color: var(--naranja-resalt);
+  color: #ffffff;
+  box-shadow: 0 0.4rem 1rem rgba(122, 122, 122, 0.25);
+  transform: translateY(-3px);
+  font-weight: bold;
 }
 
 /* ==== INDEX.HTML ==== */
@@ -163,10 +207,14 @@
   transition: color 0.2s ease;
 }
 
-.footer-link:hover {
+.footer-link:hover,
+.footer-link:focus-visible {
   color: #ffffff;
   text-decoration: underline;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 0.12em;
 }
+
 
 /* ==== TÉCNICAS-HERRAMIENTAS.HTML ==== */
 /* Ajuste Navbar sticky */
@@ -206,9 +254,12 @@
   transition: color 0.3s ease;
 }
 
-.aside-link-style:hover
+.aside-link-style:hover,
 .aside-link-style:focus-visible {
   color: var(--naranja-resalt);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 0.15em;
 }
 
 .video {
@@ -235,6 +286,9 @@
 .ponderaciones-link:hover,
 .ponderaciones-link:focus-visible {
   color: var(--naranja-resalt);
+  text-decoration: underline;
+  text-underline-offset: 0.25em;
+  text-decoration-thickness: 0.12em;
 }
 
 /* Tabla */
